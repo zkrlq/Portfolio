@@ -26,3 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajustar o tamanho ao redimensionar a janela
     window.addEventListener('resize', adjustContentSize);
 });
+    // Função para fazer o texto desaparecer e apareder quando rolado a pagina
+    window.addEventListener('scroll', function() {
+        const texto = document.getElementById('texto');
+        const scrollTop = window.scrollY;
+        const maxScroll = 300; // Defina até onde o texto deve desaparecer
+    
+        if (scrollTop < maxScroll) {
+            texto.style.opacity = 1 - (scrollTop / maxScroll);
+        } else {
+            texto.style.opacity = 0;
+        }
+    });
+    
+    window.addEventListener('load', function() {
+        const texto = document.getElementById('main');
+        texto.classList.add('visible'); // Adiciona a classe para iniciar a animação
+    });
+    

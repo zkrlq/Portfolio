@@ -41,7 +41,7 @@ header{
     color: #A9A9A9;
     font-weight: 800;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .logo:hover{
@@ -59,8 +59,8 @@ nav a{
 
 nav a:hover,
 nav a.active{
-    color:  #9A9A9A;
-    border-bottom: 3px solid  #9A9A9A;
+    color:  #9932CC;
+    border-bottom: 3px solid  #9932CC;
 }
 
 @media(max-width:995px){
@@ -126,9 +126,13 @@ span{
 }
 
 .home-content p{
+    opacity: 0;
+    transition: opacity 2s ease;
     font-size: 1.6rem;
 }
-
+#main.visible {
+    opacity: 1;
+}
 .home-img{
     border-radius: 50%;
 }
@@ -136,7 +140,7 @@ span{
 .home-img img{
     position: relative;
     width: 26vw;
-    height: 26vw;
+    height: auto;
     border-radius: 50%;
     box-shadow: 0 0 25px solid #9932CC;
     cursor: pointer;
@@ -237,7 +241,7 @@ span{
         content: "Web Designer";
     }
     61%, 80%{
-        content: "Youtuber";
+        content: "Designer";
     }
     81%, 100%{
         content: "Script Writer";
